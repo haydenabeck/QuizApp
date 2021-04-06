@@ -44,4 +44,43 @@ var questions = [
 
 var score = 0;
 
+// How we ask the questions:
+// First we loop through all the questions in the questions array.
+for(var i=0; i < questions.length; i++){
+    // Ask the user a question in a prompt window. Here questions loop through the prompts defined in the questions variable.
+    var response = window.prompt(questions[i].prompt);
+    // If the question is right display correct alert
+    if (response == questions[i].answer){
+        // If the answer is right, add to the score
+        score++;
+        alert("Correct!")
+        // If the question is wrong, display the wrong answer alert
+    } else {
+        alert("Aww dang, looks like you missed one! It's ok, this quiz is really really hard. I don't even know all the answers.");
+    }
+}
 
+// Final score total for the quiz.
+alert("you got " + score + "/" + questions.length);
+
+// Timer
+function startTimer(duration, display) {
+    var timer = duration, seconds;
+    setInterval(function () {
+        seconds = parseInt(timer % 60, 10);
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var sixtySeconds = 60,
+        display = document.querySelector('#time');
+    startTimer(sixtySeconds, display);
+};
