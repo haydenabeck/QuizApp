@@ -1,14 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px;
-    padding: 20px
+:root {
+  background-color: white;
+  color: Black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 5px;
 }

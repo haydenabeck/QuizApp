@@ -34,7 +34,7 @@ HTML, CSS, Javascript
  A 10 question quiz to pass time
 
 ## Screenshots
-<img src="/assets.Screenshot(11).png" alt="">
+<img src="./assets/Screenshot(11).png" alt="">
 
 ## Contact 
 #### Name (@haydenabeck)
